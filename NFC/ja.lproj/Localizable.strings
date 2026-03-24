@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  NFC
+
+  Created by 大川 博 on 2026/03/23.
+  
+*/
+"Write successfully." = "書き込みに成功しました";
+"Write Fail !" = "書き込みに失敗しました！";
+"%d bytes" = "%d バイト";
+"Writable Card : %@" = "書き込み可能なカード : %@";
+"Likely Card : %@" = "推定されるカード : %@";
