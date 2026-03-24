@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		680D01012F72D73900E7548C /* LUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680D01002F72D73900E7548C /* LUpdate.swift */; };
+		680D01042F72D74D00E7548C /* LUpdate.strings in Resources */ = {isa = PBXBuildFile; fileRef = 680D01022F72D74D00E7548C /* LUpdate.strings */; };
 		680DE5AD2F721A2900E7548C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 680DE5AC2F721A2900E7548C /* README.md */; };
 		683300232F70D050000B9430 /* LNTAG215.strings in Resources */ = {isa = PBXBuildFile; fileRef = 683300212F70D050000B9430 /* LNTAG215.strings */; };
 		683300542F713336000B9430 /* cardType.py in Resources */ = {isa = PBXBuildFile; fileRef = 683300532F713336000B9430 /* cardType.py */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		680D01002F72D73900E7548C /* LUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LUpdate.swift; path = ../XPP/LUpdate.swift; sourceTree = SOURCE_ROOT; };
+		680D01032F72D74D00E7548C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ../../XPP/ja.lproj/LUpdate.strings; sourceTree = "<group>"; };
 		680DE5AC2F721A2900E7548C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		683300222F70D050000B9430 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ../../XPP/ja.lproj/LNTAG215.strings; sourceTree = "<group>"; };
 		683300532F713336000B9430 /* cardType.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = cardType.py; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 				6833FFFD2F70CFC8000B9430 /* LLocalizer.swift */,
 				6833FFD02F70B8FD000B9430 /* LNTAG215.swift */,
 				683300212F70D050000B9430 /* LNTAG215.strings */,
+				680D01002F72D73900E7548C /* LUpdate.swift */,
+				680D01022F72D74D00E7548C /* LUpdate.strings */,
 				6833FFE12F70BD9C000B9430 /* NFC */,
 			);
 			path = XPP;
@@ -167,6 +173,7 @@
 				6833FFE22F70BD9C000B9430 /* isCardDetected.py in Resources */,
 				680DE5AD2F721A2900E7548C /* README.md in Resources */,
 				6833FFE32F70BD9C000B9430 /* readUID.py in Resources */,
+				680D01042F72D74D00E7548C /* LUpdate.strings in Resources */,
 				683300542F713336000B9430 /* cardType.py in Resources */,
 				6833FFE42F70BD9C000B9430 /* writeNDEF.py in Resources */,
 				6833FFE52F70BD9C000B9430 /* readNDEF.py in Resources */,
@@ -203,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6833FFDA2F70B965000B9430 /* LExtensions_macOS.swift in Sources */,
+				680D01012F72D73900E7548C /* LUpdate.swift in Sources */,
 				6833FFDB2F70B965000B9430 /* LExtensions.swift in Sources */,
 				6833FFDC2F70B965000B9430 /* LNTAG215.swift in Sources */,
 				6833FFFE2F70CFC8000B9430 /* LLocalizer.swift in Sources */,
@@ -212,6 +220,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		680D01022F72D74D00E7548C /* LUpdate.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680D01032F72D74D00E7548C /* ja */,
+			);
+			name = LUpdate.strings;
+			sourceTree = "<group>";
+		};
 		683300212F70D050000B9430 /* LNTAG215.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
