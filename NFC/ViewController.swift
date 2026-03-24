@@ -14,7 +14,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var uidField: NSTextField!
     @IBOutlet weak var readPrefixField: NSTextField!
     @IBOutlet weak var readURLPrefixField: NSTextField!
+    @IBOutlet weak var autoOpenURLCheck: NSButton!
     @IBOutlet weak var readDataField: NSTextField!
+    @IBOutlet weak var openURLButton: NSButton!
     @IBOutlet weak var readBytesLabel: NSTextField!
     @IBOutlet weak var likelyCardLabel: NSTextField!
     @IBOutlet weak var readButton: NSButton!
@@ -28,9 +30,6 @@ class ViewController: NSViewController {
     @IBOutlet weak var writeButton: NSButton!
     
     @IBOutlet weak var soundPopup: NSPopUpButton!
-    
-    @IBOutlet weak var autoOpenURLCheck: NSButton!
-    @IBOutlet weak var openURLButton: NSButton!
 
     /*==========================================================================
      
@@ -82,6 +81,7 @@ class ViewController: NSViewController {
         let str = readDataField.stringValue
         return str.data(using: .utf8)!.count
     }
+    
     /*==========================================================================
      
      =========================================================================*/
@@ -120,8 +120,6 @@ extension ViewController {
         openURLButton.isEnabled = false
         readBytesLabel.stringValue = String(format: WRITE_BYTES_FORMAT, 0)
         likelyCardLabel.stringValue = String(format: LIKELY_CARD_FORMAT, NTAGCardType.NTAG213.name)
-        
-//        (readDataField.cell as! PaddedTextFieldCell).rightPadding = 100
         
         writePrefixField.isEnabled = false
         writePrefixField.alignment = .center
@@ -220,7 +218,7 @@ extension ViewController: NSTextFieldDelegate {
 
         alert.icon = NSApplication.shared.applicationIconImage
         alert.beginSheetModal(for: view.window!) { [self] response in
-            writeButton.isEnabled = false
+//            writeButton.isEnabled = false
         }
     }
     @IBAction func autoReadingCheck(_ sender: Any) {
@@ -274,19 +272,5 @@ extension ViewController: NSTextFieldDelegate {
     @IBAction func writeDataClearButton(_ sender: Any) {
         writeDataField.stringValue = ""
         writeDataFieldDidChange()
-    }
-}
-
-class PaddedTextFieldCell: NSTextFieldCell {
-    public var rightPadding = CGFloat(24)  //右端の余白サイズ
-
-    /*==========================================================================
-     テキスト全体の表示・編集エリアを決定するメソッド
-     =========================================================================*/
-    override func drawingRect(forBounds rect: NSRect) -> NSRect {
-        var rect = super.drawingRect(forBounds: rect)   //ビューの領域を取得
-        
-        rect.size.width -= rightPadding
-        return rect
     }
 }
