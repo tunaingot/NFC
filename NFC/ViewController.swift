@@ -34,7 +34,7 @@ class ViewController: NSViewController {
     /*==========================================================================
      
      =========================================================================*/
-    private let AUTO_READING_INTERVAL = Double(1)
+    private let AUTO_READING_INTERVAL = Double(2)
     private let AUTO_READING_SAVE_KEY = "Auto Reading"
     private let OPEN_URL_AUTOMATICALLY_SAVE_KEY = "Open URL Automatically"
     private let READ_COMPLETE_SOUND_SAVE_KEY = "Read Complete Sound"
@@ -45,16 +45,17 @@ class ViewController: NSViewController {
     /*==========================================================================
      
      =========================================================================*/
-    private var displayedNTAG: LNTAG215?
+//    private var displayedNTAG: LNTAG215?
+    private var displayedNTAG = LNTAG215()
     private var isCardDetected = false
     private var openURLButtonState: Bool {
         if autoOpenURLCheck.isOn {
             return false
         } else {
-            if displayedNTAG == nil {
+            if displayedNTAG.cardData == nil {
                 return false
             } else {
-                if displayedNTAG!.prefix.contains("http") {
+                if displayedNTAG.prefix.contains("http") {
                     return true
                 } else {
                     return false
@@ -69,7 +70,7 @@ class ViewController: NSViewController {
             return writeDataField.stringValue
         } else {
             let str = writeDataField.stringValue
-            let writeStr = str.replacingOccurrences(of: LNTAG215.urlPrefix(of: prefix), with: "")
+            let writeStr = str.replacingOccurrences(of: LNTAG215.uriPrefixString(of: prefix), with: "")
             
             return writeStr
         }
@@ -81,6 +82,7 @@ class ViewController: NSViewController {
         let str = readDataField.stringValue
         return str.data(using: .utf8)!.count
     }
+    private var isVerifyState = false
     
     /*==========================================================================
      
@@ -105,6 +107,7 @@ class ViewController: NSViewController {
 extension ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        displayedNTAG.delegate = self
         
         autoReadingCheck.isOn = Bool.load(forKey: AUTO_READING_SAVE_KEY)
         
@@ -145,15 +148,7 @@ extension ViewController {
         
         Timer.scheduledTimer(withTimeInterval: AUTO_READING_INTERVAL, repeats: true) { [self] Timer in
             if autoReadingCheck.isOn {
-                if LNTAG215.isCardDetected {
-                    if isCardDetected == false {
-                        isCardDetected = true
-                        dprint("Card Detect!")
-                        readButton(self)
-                    }
-                } else {
-                    isCardDetected = false
-                }
+                displayedNTAG.searchReaders()
             }
         }
     }
@@ -167,8 +162,10 @@ extension ViewController {
     }
     
     private func playSound() {
-        if let sound = NSSound(named: soundPopup.selectedItem!.title) {
-            sound.play()
+        DispatchQueue.main.async { [self] in
+            if let sound = NSSound(named: soundPopup.selectedItem!.title) {
+                sound.play()
+            }
         }
     }
 }
@@ -176,50 +173,17 @@ extension ViewController {
 //MARK: - action
 extension ViewController: NSTextFieldDelegate {
     @IBAction func readUIDButton(_ sender: Any) {
-        let NTAG = LNTAG215()
-        print(NTAG.UID)
-        uidField.stringValue = NTAG.UID
+        displayedNTAG.readUIDAsync()
     }
     @IBAction func readButton(_ sender: Any) {
-        displayedNTAG = LNTAG215()
-        
-        print(displayedNTAG!.prefix + displayedNTAG!.payloadString)
-        readURLPrefixField.stringValue = displayedNTAG!.prefix
-        readPrefixField.stringValue = String(format: "0x%02X", displayedNTAG!.uriPrefix)
-        readDataField.stringValue = displayedNTAG!.payloadString
-        uidField.stringValue = displayedNTAG!.UID
-//        prefixPopup.selectItem(at: 0)
-//        writeDataField.stringValue = ""
-//        NSSound.beep()
-        playSound()
-        openURLButton.isEnabled = openURLButtonState
-        readBytesLabel.stringValue = String(format: WRITE_BYTES_FORMAT, readBytes)
-        likelyCardLabel.stringValue = String(format: LIKELY_CARD_FORMAT, LNTAG215.writableCard(for: readBytes).name)
-        
-        if autoOpenURLCheck.isOn {
-            if displayedNTAG!.prefix.contains("http") {
-                let url = displayedNTAG!.prefix + displayedNTAG!.payloadString
-                
-                NSWorkspace.shared.open(URL(string: url)!)
-            }
-        }
-        
+//        displayedNTAG.readDataAsync()
+        displayedNTAG.readUIDAsync()
     }
     @IBAction func writeButton(_ sender: Any) {
         let prefix = LNTAG215.prefix(of: writeDataField.stringValue)
-        let writeResult = LNTAG215.write(prefex: prefix, data: writeString.data(using: .utf8)!)
-        let alert = NSAlert.informativeAlert(okTitle: "OK", cancelTitle: nil, message: "Write successfully.".localized)
         
-        if writeResult == false {
-            alert.messageText = "Write Fail !".localized
-            alert.alertStyle = .critical
-        }
-        playSound()
-
-        alert.icon = NSApplication.shared.applicationIconImage
-        alert.beginSheetModal(for: view.window!) { [self] response in
-//            writeButton.isEnabled = false
-        }
+        dprint(writeString, writeString.data(using: .utf8)!)
+        displayedNTAG.writeDataAsync(prefix: prefix, payload: writeString.data(using: .utf8)!)
     }
     @IBAction func autoReadingCheck(_ sender: Any) {
         if autoReadingCheck.isOn {
@@ -242,8 +206,8 @@ extension ViewController: NSTextFieldDelegate {
         soundPopup.indexOfSelectedItem.save(forKey: READ_COMPLETE_SOUND_SAVE_KEY)
     }
     @IBAction func openURLButton(_ sender: Any) {
-        let prefix = displayedNTAG!.prefix
-        let payload = displayedNTAG!.payloadString
+        let prefix = displayedNTAG.cardData!.uriPrefixString
+        let payload = displayedNTAG.cardData!.payloadString
         
         NSWorkspace.shared.open(URL(string: prefix + payload)!)
     }
@@ -254,7 +218,7 @@ extension ViewController: NSTextFieldDelegate {
     private func writeDataFieldDidChange() {
         let prefix = LNTAG215.prefix(of: writeDataField.stringValue)
         
-        writeURLPrefixField.stringValue = LNTAG215.urlPrefix(of: prefix)
+        writeURLPrefixField.stringValue = LNTAG215.uriPrefixString(of: prefix)
         writeBytesLabel.stringValue = String(format: WRITE_BYTES_FORMAT, writeBytes)
         writableCardLabel.stringValue = String(format: WRITABLE_CARD_FORMAT, LNTAG215.writableCard(for: writeBytes).name)
         writePrefixField.stringValue = String(format: "0x%02X", prefix)
@@ -273,4 +237,97 @@ extension ViewController: NSTextFieldDelegate {
         writeDataField.stringValue = ""
         writeDataFieldDidChange()
     }
+}
+
+extension ViewController: LNTAG215Delegate {
+    func didFinishSearchingCardReaders() {
+        if displayedNTAG.cardReaderStatus == .validCard {
+            if isCardDetected == false {
+                isCardDetected = true
+                dprint("Card Detect!")
+                readButton(self)
+            }
+        } else {
+            isCardDetected = false
+        }
+
+    }
+    
+    func didFinishReadingUID(UID: String?) {
+        displayedNTAG.readDataAsync()
+    }
+    
+    func didFinishReadingCardData(cardData: NTAGCardData?) {
+        if isVerifyState {
+            playSound()
+            writeResultWork()
+        } else {
+            DispatchQueue.main.async { [self] in
+                if cardData != nil {
+                    uidField.stringValue = displayedNTAG.UID
+                    
+                    print(cardData!.uriPrefix, cardData!.payloadString)
+                    readURLPrefixField.stringValue = cardData!.uriPrefixString
+                    readPrefixField.stringValue = String(format: "0x%02X", cardData!.uriPrefix)
+                    readDataField.stringValue = cardData!.payloadString
+                    uidField.stringValue = displayedNTAG.UID
+                    playSound()
+                    openURLButton.isEnabled = openURLButtonState
+                    readBytesLabel.stringValue = String(format: WRITE_BYTES_FORMAT, readBytes)
+                    likelyCardLabel.stringValue = String(format: LIKELY_CARD_FORMAT, LNTAG215.writableCard(for: readBytes).name)
+                    
+                    if autoOpenURLCheck.isOn {
+                        if cardData!.uriPrefixString.contains("http") {
+                            let url = cardData!.uriPrefixString + cardData!.payloadString
+                            
+                            NSWorkspace.shared.open(URL(string: url)!)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func didFinishWritingCardData(success: Bool) {
+        if !success {
+            let alert = NSAlert.criticalAlert(okTitle: "OK", cancelTitle: nil, message: "Write Fail !".localized)
+            
+            alert.icon = NSApplication.shared.applicationIconImage
+            playSound()
+            alert.beginSheetModal(for: view.window!) { response in
+                
+            }
+        } else {
+            isVerifyState = true
+            displayedNTAG.readDataAsync()
+        }
+    }
+    
+    func writeResultWork() {
+        let readPayload = displayedNTAG.cardData!.payloadString
+        
+        isVerifyState = false
+        
+        DispatchQueue.main.async { [self] in
+            print(writeString.unicodeScalars.map { $0.value })
+            print(readPayload.unicodeScalars.map { $0.value })
+            dprint(writeString, readPayload, writeString.data(using: .utf8)!.count, readPayload.data(using: .utf8)!.count)
+            if readPayload == writeString {
+                let alert = NSAlert.informativeAlert(okTitle: "OK", cancelTitle: nil, message: "Write successfully.".localized)
+                
+                alert.icon = NSApplication.shared.applicationIconImage
+                alert.beginSheetModal(for: view.window!) { response in
+                    
+                }
+            } else {
+                let alert = NSAlert.criticalAlert(okTitle: "OK", cancelTitle: nil, message: "Write Fail !".localized)
+                
+                alert.icon = NSApplication.shared.applicationIconImage
+                alert.beginSheetModal(for: view.window!) { response in
+                    
+                }
+            }
+        }
+    }
+    
 }
