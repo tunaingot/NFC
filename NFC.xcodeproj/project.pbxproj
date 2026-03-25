@@ -11,15 +11,10 @@
 		680D01042F72D74D00E7548C /* LUpdate.strings in Resources */ = {isa = PBXBuildFile; fileRef = 680D01022F72D74D00E7548C /* LUpdate.strings */; };
 		680DE5AD2F721A2900E7548C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 680DE5AC2F721A2900E7548C /* README.md */; };
 		683300232F70D050000B9430 /* LNTAG215.strings in Resources */ = {isa = PBXBuildFile; fileRef = 683300212F70D050000B9430 /* LNTAG215.strings */; };
-		683300542F713336000B9430 /* cardType.py in Resources */ = {isa = PBXBuildFile; fileRef = 683300532F713336000B9430 /* cardType.py */; };
 		6833FFDA2F70B965000B9430 /* LExtensions_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6833FFC32F70B88F000B9430 /* LExtensions_macOS.swift */; };
 		6833FFDB2F70B965000B9430 /* LExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6833FFC22F70B88F000B9430 /* LExtensions.swift */; };
-		6833FFDC2F70B965000B9430 /* LNTAG215.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6833FFD02F70B8FD000B9430 /* LNTAG215.swift */; };
-		6833FFE22F70BD9C000B9430 /* isCardDetected.py in Resources */ = {isa = PBXBuildFile; fileRef = 6833FFDD2F70BD9C000B9430 /* isCardDetected.py */; };
-		6833FFE32F70BD9C000B9430 /* readUID.py in Resources */ = {isa = PBXBuildFile; fileRef = 6833FFDF2F70BD9C000B9430 /* readUID.py */; };
-		6833FFE42F70BD9C000B9430 /* writeNDEF.py in Resources */ = {isa = PBXBuildFile; fileRef = 6833FFE02F70BD9C000B9430 /* writeNDEF.py */; };
-		6833FFE52F70BD9C000B9430 /* readNDEF.py in Resources */ = {isa = PBXBuildFile; fileRef = 6833FFDE2F70BD9C000B9430 /* readNDEF.py */; };
 		6833FFFE2F70CFC8000B9430 /* LLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6833FFFD2F70CFC8000B9430 /* LLocalizer.swift */; };
+		68DD2BA12F7380050032A306 /* LNTAG215.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DD2BA02F7380050032A306 /* LNTAG215.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,21 +22,30 @@
 		680D01032F72D74D00E7548C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ../../XPP/ja.lproj/LUpdate.strings; sourceTree = "<group>"; };
 		680DE5AC2F721A2900E7548C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		683300222F70D050000B9430 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ../../XPP/ja.lproj/LNTAG215.strings; sourceTree = "<group>"; };
-		683300532F713336000B9430 /* cardType.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = cardType.py; sourceTree = "<group>"; };
 		6833FFB02F70B877000B9430 /* NFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6833FFC22F70B88F000B9430 /* LExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LExtensions.swift; path = "/Users/hiroshi/Developer/Xcode Projects/XPP/LExtensions.swift"; sourceTree = "<absolute>"; };
 		6833FFC32F70B88F000B9430 /* LExtensions_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LExtensions_macOS.swift; path = "/Users/hiroshi/Developer/Xcode Projects/XPP/LExtensions_macOS.swift"; sourceTree = "<absolute>"; };
-		6833FFD02F70B8FD000B9430 /* LNTAG215.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LNTAG215.swift; path = ../XPP/LNTAG215.swift; sourceTree = SOURCE_ROOT; };
-		6833FFDD2F70BD9C000B9430 /* isCardDetected.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = isCardDetected.py; sourceTree = "<group>"; };
-		6833FFDE2F70BD9C000B9430 /* readNDEF.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = readNDEF.py; sourceTree = "<group>"; };
-		6833FFDF2F70BD9C000B9430 /* readUID.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = readUID.py; sourceTree = "<group>"; };
-		6833FFE02F70BD9C000B9430 /* writeNDEF.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = writeNDEF.py; sourceTree = "<group>"; };
+		6833FFD02F70B8FD000B9430 /* LNTAG215_py.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LNTAG215_py.swift; path = ../XPP/LNTAG215_py.swift; sourceTree = SOURCE_ROOT; };
 		6833FFFD2F70CFC8000B9430 /* LLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LLocalizer.swift; path = ../XPP/LLocalizer.swift; sourceTree = SOURCE_ROOT; };
+		68DD2BA02F7380050032A306 /* LNTAG215.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNTAG215.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		68DD2C282F73A4A00032A306 /* Exceptions for "NFC" folder in "NFC" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				entitlements.plist,
+			);
+			target = 6833FFAF2F70B877000B9430 /* NFC */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		6833FFB22F70B877000B9430 /* NFC */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				68DD2C282F73A4A00032A306 /* Exceptions for "NFC" folder in "NFC" target */,
+			);
 			path = NFC;
 			sourceTree = "<group>";
 		};
@@ -82,27 +86,14 @@
 				6833FFC22F70B88F000B9430 /* LExtensions.swift */,
 				6833FFC32F70B88F000B9430 /* LExtensions_macOS.swift */,
 				6833FFFD2F70CFC8000B9430 /* LLocalizer.swift */,
-				6833FFD02F70B8FD000B9430 /* LNTAG215.swift */,
+				6833FFD02F70B8FD000B9430 /* LNTAG215_py.swift */,
 				683300212F70D050000B9430 /* LNTAG215.strings */,
 				680D01002F72D73900E7548C /* LUpdate.swift */,
 				680D01022F72D74D00E7548C /* LUpdate.strings */,
-				6833FFE12F70BD9C000B9430 /* NFC */,
+				68DD2BA02F7380050032A306 /* LNTAG215.swift */,
 			);
 			path = XPP;
 			sourceTree = "<group>";
-		};
-		6833FFE12F70BD9C000B9430 /* NFC */ = {
-			isa = PBXGroup;
-			children = (
-				683300532F713336000B9430 /* cardType.py */,
-				6833FFDD2F70BD9C000B9430 /* isCardDetected.py */,
-				6833FFDE2F70BD9C000B9430 /* readNDEF.py */,
-				6833FFDF2F70BD9C000B9430 /* readUID.py */,
-				6833FFE02F70BD9C000B9430 /* writeNDEF.py */,
-			);
-			name = NFC;
-			path = ../XPP/Python/NFC;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -170,13 +161,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6833FFE22F70BD9C000B9430 /* isCardDetected.py in Resources */,
 				680DE5AD2F721A2900E7548C /* README.md in Resources */,
-				6833FFE32F70BD9C000B9430 /* readUID.py in Resources */,
 				680D01042F72D74D00E7548C /* LUpdate.strings in Resources */,
-				683300542F713336000B9430 /* cardType.py in Resources */,
-				6833FFE42F70BD9C000B9430 /* writeNDEF.py in Resources */,
-				6833FFE52F70BD9C000B9430 /* readNDEF.py in Resources */,
 				683300232F70D050000B9430 /* LNTAG215.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,7 +186,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ \"${CONFIGURATION}\" == \"Release\" ]; then\n    /bin/bash \"/Users/hiroshi/Developer/distribute-on-GitHub/update_build_number_and_json.sh\" \"/Users/hiroshi/Developer/Xcode Projects/NFC/latest.json\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ \"${CONFIGURATION}\" == \"Release\" ]; then\n    /bin/bash \"/Users/hiroshi/Developer/distribute-on-GitHub/update_build_number.sh\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -211,8 +197,8 @@
 			files = (
 				6833FFDA2F70B965000B9430 /* LExtensions_macOS.swift in Sources */,
 				680D01012F72D73900E7548C /* LUpdate.swift in Sources */,
+				68DD2BA12F7380050032A306 /* LNTAG215.swift in Sources */,
 				6833FFDB2F70B965000B9430 /* LExtensions.swift in Sources */,
-				6833FFDC2F70B965000B9430 /* LNTAG215.swift in Sources */,
 				6833FFFE2F70CFC8000B9430 /* LLocalizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,12 +352,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NFC/entitlements.plist;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = H4TZ84J9G7;
-				ENABLE_APP_SANDBOX = NO;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -400,12 +397,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NFC/entitlements.plist;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = H4TZ84J9G7;
-				ENABLE_APP_SANDBOX = NO;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
