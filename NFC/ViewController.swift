@@ -240,8 +240,13 @@ extension ViewController: NSTextFieldDelegate {
 }
 
 extension ViewController: LNTAG215Delegate {
-    func didFinishSearchingCardReaders() {
-        if displayedNTAG.cardReaderStatus == .validCard {
+    func didFinishSearchingCardReaders(info: [SmartCardReaderInfo]) {
+        guard !info.isEmpty else {
+            isCardDetected = false
+            return
+        }
+        
+        if info.first!.status == .validCard {
             if isCardDetected == false {
                 isCardDetected = true
                 dprint("Card Detect!")

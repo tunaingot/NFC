@@ -9,7 +9,7 @@ import Foundation
 import CryptoTokenKit
 
 protocol LNTAG215Delegate {
-    func didFinishSearchingCardReaders()
+    func didFinishSearchingCardReaders(info: [SmartCardReaderInfo])
     func didFinishReadingUID(UID: String?)
     func didFinishReadingCardData(cardData: NTAGCardData?)
     func didFinishWritingCardData(success: Bool)
@@ -220,7 +220,7 @@ extension LNTAG215 {
                 print("Name: \(info.name), Status: \(info.status.rawValue), ATR: \(info.atr), CanWrite: \(info.canWrite)")
             }
             NotificationCenter.default.post(name: didFinishSearchingCardReadersNotification, object: self)
-            (delegate as? LNTAG215Delegate)?.didFinishSearchingCardReaders()
+            (delegate as? LNTAG215Delegate)?.didFinishSearchingCardReaders(info: readers)
         }
     }
     public func readUIDAsync() {
