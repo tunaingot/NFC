@@ -97,29 +97,6 @@ extension FileManager {
         
         return isDir.boolValue
     }
-    public var sounds: [String] {
-        var result = [String]()
-        let paths = [
-            "/System/Library/Sounds",
-            "/Library/Sounds",
-            NSHomeDirectory() + "/Library/Sounds"
-        ]
-        
-        for path in paths {
-            do {
-                let files = try FileManager.default.contentsOfDirectory(atPath: path)
-                
-                for file in files {
-                    if file.pathExtension == "aiff" {
-                        result.append(file.deletingPathExtension)
-                    }
-                }
-            } catch {
-                
-            }
-        }
-        return result
-    }
 }
 
 extension NSApplication {
@@ -188,5 +165,31 @@ extension NSAlert {
         }
         
         return alert
+    }
+}
+
+extension NSSound {
+    public static var soundList: [String] {
+        var result = [String]()
+        let paths = [
+            "/System/Library/Sounds",
+            "/Library/Sounds",
+            NSHomeDirectory() + "/Library/Sounds"
+        ]
+        
+        for path in paths {
+            do {
+                let files = try FileManager.default.contentsOfDirectory(atPath: path)
+                
+                for file in files {
+                    if file.pathExtension == "aiff" {
+                        result.append(file.deletingPathExtension)
+                    }
+                }
+            } catch {
+                
+            }
+        }
+        return result
     }
 }

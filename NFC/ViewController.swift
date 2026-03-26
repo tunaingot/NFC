@@ -136,7 +136,7 @@ extension ViewController {
         
 
         soundPopup.removeAllItems()
-        soundPopup.addItems(withTitles: FileManager.default.sounds)
+        soundPopup.addItems(withTitles: NSSound.soundList)
         soundPopup.selectItem(at: Int.load(forKey: READ_COMPLETE_SOUND_SAVE_KEY))
 
         autoOpenURLCheck.isOn = Bool.load(forKey: OPEN_URL_AUTOMATICALLY_SAVE_KEY)
