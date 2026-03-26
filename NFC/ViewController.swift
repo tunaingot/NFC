@@ -70,7 +70,7 @@ class ViewController: NSViewController {
             return writeDataField.stringValue
         } else {
             let str = writeDataField.stringValue
-            let writeStr = str.replacingOccurrences(of: LNTAG215.uriPrefixString(of: prefix), with: "")
+            let writeStr = str.replacingOccurrences(of: LNTAG215.prefixString(of: prefix), with: "")
             
             return writeStr
         }
@@ -206,7 +206,7 @@ extension ViewController: NSTextFieldDelegate {
         soundPopup.indexOfSelectedItem.save(forKey: READ_COMPLETE_SOUND_SAVE_KEY)
     }
     @IBAction func openURLButton(_ sender: Any) {
-        let prefix = displayedNTAG.cardData!.uriPrefixString
+        let prefix = displayedNTAG.cardData!.prefixString
         let payload = displayedNTAG.cardData!.payloadString
         
         NSWorkspace.shared.open(URL(string: prefix + payload)!)
@@ -218,7 +218,7 @@ extension ViewController: NSTextFieldDelegate {
     private func writeDataFieldDidChange() {
         let prefix = LNTAG215.prefix(of: writeDataField.stringValue)
         
-        writeURLPrefixField.stringValue = LNTAG215.uriPrefixString(of: prefix)
+        writeURLPrefixField.stringValue = LNTAG215.prefixString(of: prefix)
         writeBytesLabel.stringValue = String(format: WRITE_BYTES_FORMAT, writeBytes)
         writableCardLabel.stringValue = String(format: WRITABLE_CARD_FORMAT, LNTAG215.writableCard(for: writeBytes).name)
         writePrefixField.stringValue = String(format: "0x%02X", prefix)
@@ -264,9 +264,9 @@ extension ViewController: LNTAG215Delegate {
                 if cardData != nil {
                     uidField.stringValue = displayedNTAG.UID
                     
-                    print(cardData!.uriPrefix, cardData!.payloadString)
-                    readURLPrefixField.stringValue = cardData!.uriPrefixString
-                    readPrefixField.stringValue = String(format: "0x%02X", cardData!.uriPrefix)
+                    print(cardData!.prefix, cardData!.payloadString)
+                    readURLPrefixField.stringValue = cardData!.prefixString
+                    readPrefixField.stringValue = String(format: "0x%02X", cardData!.prefix)
                     readDataField.stringValue = cardData!.payloadString
                     uidField.stringValue = displayedNTAG.UID
                     playSound()
@@ -275,8 +275,8 @@ extension ViewController: LNTAG215Delegate {
                     likelyCardLabel.stringValue = String(format: LIKELY_CARD_FORMAT, LNTAG215.writableCard(for: readBytes).name)
                     
                     if autoOpenURLCheck.isOn {
-                        if cardData!.uriPrefixString.contains("http") {
-                            let url = cardData!.uriPrefixString + cardData!.payloadString
+                        if cardData!.prefixString.contains("http") {
+                            let url = cardData!.prefixString + cardData!.payloadString
                             
                             NSWorkspace.shared.open(URL(string: url)!)
                         }

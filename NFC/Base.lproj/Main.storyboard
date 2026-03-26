@@ -23,7 +23,7 @@
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" image="gear" catalog="system" keyEquivalent="," id="BOF-NM-1cW"/>
-                                        <menuItem title="Check Update…" image="arrow.triangle.2.circlepath" catalog="system" id="SER-Q6-sn3">
+                                        <menuItem title="Check Update…" image="arrow.trianglehead.2.clockwise.rotate.90" catalog="system" id="SER-Q6-sn3">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
@@ -1092,7 +1092,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.triangle.2.circlepath" catalog="system" width="16" height="15"/>
+        <image name="arrow.trianglehead.2.clockwise.rotate.90" catalog="system" width="16" height="15"/>
         <image name="gear" catalog="system" width="17" height="16"/>
         <image name="globe" catalog="system" width="15" height="15"/>
         <image name="xmark.circle.fill" catalog="system" width="15" height="15"/>

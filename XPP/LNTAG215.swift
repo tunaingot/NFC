@@ -46,13 +46,13 @@ public struct NTAGCardData {
     public var typeLength = 0
     public var payloadLength = 0
     public var typeField = 0
-    public var uriPrefix = 0
+    public var prefix = 0
     
     /*==========================================================================
      
      =========================================================================*/
-    public var uriPrefixString: String {
-        LNTAG215.uriPrefixString(of: uriPrefix)
+    public var prefixString: String {
+        LNTAG215.prefixString(of: prefix)
     }
     public var payload: Data { return rawData[7 ..< 7 + payloadLength - 1] }
     public var payloadString: String {
@@ -76,7 +76,7 @@ public struct NTAGCardData {
         typeLength = Int(readData[3])
         payloadLength = Int(readData[4])
         typeField = Int(readData[5])
-        uriPrefix = Int(readData[6])
+        prefix = Int(readData[6])
     }
     
 }
@@ -176,8 +176,8 @@ class LNTAG215: NSObject {
     public var prefix: String {
         guard cardData != nil else { return "" }
         
-        if cardData!.uriPrefix < LNTAG215.PREFIX_LIST.count {
-            return LNTAG215.PREFIX_LIST[cardData!.uriPrefix]
+        if cardData!.prefix < LNTAG215.PREFIX_LIST.count {
+            return LNTAG215.PREFIX_LIST[cardData!.prefix]
         } else {
             return ""
         }
@@ -464,7 +464,7 @@ extension LNTAG215 {
     /*==========================================================================
      utilities
      =========================================================================*/
-    public static func uriPrefixString(of prefix: Int) -> String {
+    public static func prefixString(of prefix: Int) -> String {
         return PREFIX_LIST[prefix]
     }
     public static func prefix(of url: String) -> Int {
