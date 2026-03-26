@@ -10,6 +10,12 @@
             "state" : "new",
             "value" : "Find"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "検索"
+          }
         }
       }
     },
@@ -33,6 +39,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Customize Toolbar…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ツールバーをカスタマイズ…"
           }
         }
       }
@@ -70,6 +82,12 @@
             "state" : "new",
             "value" : "Transformations"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "変換"
+          }
         }
       }
     },
@@ -81,6 +99,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Spelling"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スペル"
           }
         }
       }
@@ -106,6 +130,12 @@
             "state" : "new",
             "value" : "Speech"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スピーチ"
+          }
         }
       }
     },
@@ -117,6 +147,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Find"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "検索"
           }
         }
       }
@@ -142,6 +178,12 @@
             "state" : "new",
             "value" : "Quit NFC"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NFC を終了"
+          }
         }
       }
     },
@@ -166,6 +208,12 @@
             "state" : "new",
             "value" : "About NFC"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NFC について"
+          }
         }
       }
     },
@@ -189,6 +237,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Edit"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編集"
           }
         }
       }
@@ -238,6 +292,12 @@
             "state" : "new",
             "value" : "Substitutions"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自動置換"
+          }
         }
       }
     },
@@ -249,6 +309,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Smart Copy/Paste"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スマートコピー/ペースト"
           }
         }
       }
@@ -274,6 +340,12 @@
             "state" : "new",
             "value" : "Correct Spelling Automatically"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スペルを自動的に修正"
+          }
         }
       }
     },
@@ -298,6 +370,12 @@
             "state" : "new",
             "value" : "Print…"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プリント…"
+          }
         }
       }
     },
@@ -309,6 +387,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Window"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウィンドウ"
           }
         }
       }
@@ -370,6 +454,12 @@
             "state" : "new",
             "value" : "File"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ファイル"
+          }
         }
       }
     },
@@ -381,6 +471,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Preferences…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定…"
           }
         }
       }
@@ -394,6 +490,12 @@
             "state" : "new",
             "value" : "Use Selection for Find"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選択部分を検索に使用"
+          }
         }
       }
     },
@@ -405,6 +507,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Save As…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "別名で保存…"
           }
         }
       }
@@ -429,6 +537,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Transformations"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "変換"
           }
         }
       }
@@ -465,6 +579,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Smart Links"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スマートリンク記号"
           }
         }
       }
@@ -508,6 +628,12 @@
             "state" : "new",
             "value" : "Make Lower Case"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小文字にする"
+          }
         }
       }
     },
@@ -519,6 +645,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "File"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ファイル"
           }
         }
       }
@@ -544,6 +676,12 @@
             "state" : "new",
             "value" : "Spelling and Grammar"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スペルと文法"
+          }
         }
       }
     },
@@ -556,6 +694,12 @@
             "state" : "new",
             "value" : "Close"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "閉じる"
+          }
         }
       }
     },
@@ -567,6 +711,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Help"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ヘルプ"
           }
         }
       }
@@ -592,6 +742,12 @@
             "state" : "new",
             "value" : "Substitutions"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自動置換"
+          }
         }
       }
     },
@@ -603,6 +759,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "NFC Help"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NFC ヘルプ"
           }
         }
       }
@@ -663,6 +825,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Paste"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ペースト"
           }
         }
       }
@@ -730,6 +898,12 @@
             "state" : "new",
             "value" : "View"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表示"
+          }
         }
       }
     },
@@ -753,6 +927,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Text Replacement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "テキストの置換"
           }
         }
       }
@@ -778,6 +958,12 @@
             "state" : "new",
             "value" : "Smart Quotes"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スマート引用符"
+          }
         }
       }
     },
@@ -789,6 +975,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "View"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表示"
           }
         }
       }
@@ -802,6 +994,12 @@
             "state" : "new",
             "value" : "Check Document Now"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "書類を今すぐチェック"
+          }
         }
       }
     },
@@ -813,6 +1011,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Services"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サービス"
           }
         }
       }
@@ -849,6 +1053,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Open…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開く…"
           }
         }
       }
@@ -964,6 +1174,12 @@
             "state" : "new",
             "value" : "Show All"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべてを表示"
+          }
         }
       }
     },
@@ -975,6 +1191,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Show Sidebar"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サイドバーを表示"
           }
         }
       }
@@ -1000,6 +1222,12 @@
             "state" : "new",
             "value" : "Bring All to Front"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべてを手前に移動"
+          }
         }
       }
     },
@@ -1023,6 +1251,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Check Grammar With Spelling"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スペルと一緒に文法をチェック"
           }
         }
       }
@@ -1078,6 +1312,12 @@
             "state" : "new",
             "value" : "Services"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サービス"
+          }
         }
       }
     },
@@ -1126,6 +1366,12 @@
             "state" : "new",
             "value" : "Open Recent"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近使った項目を開く"
+          }
         }
       }
     },
@@ -1150,6 +1396,12 @@
             "state" : "new",
             "value" : "Hide NFC"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NFC を非表示"
+          }
         }
       }
     },
@@ -1161,6 +1413,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Find Previous"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前を検索"
           }
         }
       }
@@ -1174,6 +1432,12 @@
             "state" : "new",
             "value" : "Minimize"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "しまう"
+          }
         }
       }
     },
@@ -1186,6 +1450,12 @@
             "state" : "new",
             "value" : "Stop Speaking"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "読み上げを停止"
+          }
         }
       }
     },
@@ -1197,6 +1467,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Delete"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "削除"
           }
         }
       }
@@ -1234,6 +1510,12 @@
             "state" : "new",
             "value" : "Save…"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存…"
+          }
         }
       }
     },
@@ -1258,6 +1540,12 @@
             "state" : "new",
             "value" : "Find Next"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次を検索"
+          }
         }
       }
     },
@@ -1269,6 +1557,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Page Setup…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ページ設定…"
           }
         }
       }
@@ -1294,6 +1588,12 @@
             "state" : "new",
             "value" : "Zoom"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拡大"
+          }
         }
       }
     },
@@ -1309,24 +1609,6 @@
         }
       }
     },
-    "RbD-3j-J5Y.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Card Data\"; ObjectID = \"RbD-3j-J5Y\";",
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Card Data"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "カードデータ"
-          }
-        }
-      }
-    },
     "rbD-Rh-wIN.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Check Spelling While Typing\"; ObjectID = \"rbD-Rh-wIN\";",
       "extractionState" : "extracted_with_value",
@@ -1335,6 +1617,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Check Spelling While Typing"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "入力中にスペルチェック"
           }
         }
       }
@@ -1347,6 +1635,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Smart Dashes"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スマートダッシュ記号"
           }
         }
       }
@@ -1372,6 +1666,12 @@
             "state" : "new",
             "value" : "Select All"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべてを選択"
+          }
         }
       }
     },
@@ -1384,23 +1684,11 @@
             "state" : "new",
             "value" : "Jump to Selection"
           }
-        }
-      }
-    },
-    "S7a-qd-OdA.title" : {
-      "comment" : "Class = \"NSButtonCell\"; title = \"Open URL\"; ObjectID = \"S7a-qd-OdA\";",
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Open URL"
-          }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "URLを開く"
+            "value" : "行を選択…"
           }
         }
       }
@@ -1417,6 +1705,24 @@
         }
       }
     },
+    "SER-Q6-sn3.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Check Update…\"; ObjectID = \"SER-Q6-sn3\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Check Update…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新を確認…"
+          }
+        }
+      }
+    },
     "snW-S8-Cw5.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Show Toolbar\"; ObjectID = \"snW-S8-Cw5\";",
       "extractionState" : "extracted_with_value",
@@ -1425,6 +1731,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Show Toolbar"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ツールバーを表示"
           }
         }
       }
@@ -1456,6 +1768,12 @@
             "state" : "new",
             "value" : "Window"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウィンドウ"
+          }
         }
       }
     },
@@ -1480,6 +1798,12 @@
             "state" : "new",
             "value" : "Data Detectors"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "データ検出"
+          }
         }
       }
     },
@@ -1492,6 +1816,12 @@
             "state" : "new",
             "value" : "Open Recent"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近使った項目を開く"
+          }
         }
       }
     },
@@ -1503,6 +1833,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Capitalize"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "頭語を大文字にする"
           }
         }
       }
@@ -1540,6 +1876,12 @@
             "state" : "new",
             "value" : "Cut"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カット"
+          }
         }
       }
     },
@@ -1551,6 +1893,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Hide Others"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ほかを非表示"
           }
         }
       }
@@ -1612,6 +1960,12 @@
             "state" : "new",
             "value" : "Make Upper Case"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大文字にする"
+          }
         }
       }
     },
@@ -1660,6 +2014,12 @@
             "state" : "new",
             "value" : "Edit"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編集"
+          }
         }
       }
     },
@@ -1671,6 +2031,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "New"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新規"
           }
         }
       }
@@ -1695,6 +2061,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Paste and Match Style"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ペーストしてスタイルを合わせる"
           }
         }
       }
@@ -1726,6 +2098,12 @@
             "state" : "new",
             "value" : "Help"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ヘルプ"
+          }
         }
       }
     },
@@ -1749,6 +2127,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Copy"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コピー"
           }
         }
       }
@@ -1774,6 +2158,12 @@
             "state" : "new",
             "value" : "Speech"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スピーチ"
+          }
         }
       }
     },
@@ -1785,6 +2175,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Find…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "検索…"
           }
         }
       }
@@ -1815,6 +2211,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Find and Replace…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "検索と置換…"
           }
         }
       }
@@ -1852,6 +2254,12 @@
             "state" : "new",
             "value" : "Start Speaking"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "読み上げを開始"
+          }
         }
       }
     },
@@ -1863,6 +2271,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Show Substitutions"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自動置換を表示"
           }
         }
       }

@@ -9,7 +9,7 @@ import Cocoa
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+//    private var updater = LUpdate()
 
 //    func applicationDidFinishLaunching(_ aNotification: Notification) {
 //        // Insert code here to initialize your application
@@ -29,7 +29,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //MARK: - template replacement
 extension AppDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        
+//        updater.delegate = self
+//        updater.checkUpdateAtAppLaunch()
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
@@ -37,3 +38,24 @@ extension AppDelegate {
     }
 }
 
+//MARK: - updater
+//extension AppDelegate: LUpdateURLInformationDelegate, NSMenuItemValidation {
+//    var jsonFileRawURL: String { "https://raw.githubusercontent.com/tunaingot/NFC-Distribute/refs/heads/main/latest.json" }
+//    var distributeURL: String { "https://github.com/tunaingot/NFC-Distribute" }
+//    
+//    func validateMenuItem(_ menuItem: NSMenuItem) -> Bool {
+//        return true
+//    }
+//    
+//
+//    /*==========================================================================
+//     
+//     =========================================================================*/
+//    @IBAction func checkeUpdate(_ sender: Any?) {
+//        updater.checkUpdate()
+//    }
+//    
+//    @IBAction func gotoDistrobuteWebSite(_ sender: Any?) {
+//        updater.gotoDistrobuteWebsite()
+//    }
+//}

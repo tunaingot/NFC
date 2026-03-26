@@ -7,27 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		680D01012F72D73900E7548C /* LUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680D01002F72D73900E7548C /* LUpdate.swift */; };
-		680D01042F72D74D00E7548C /* LUpdate.strings in Resources */ = {isa = PBXBuildFile; fileRef = 680D01022F72D74D00E7548C /* LUpdate.strings */; };
 		680DE5AD2F721A2900E7548C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 680DE5AC2F721A2900E7548C /* README.md */; };
-		683300232F70D050000B9430 /* LNTAG215.strings in Resources */ = {isa = PBXBuildFile; fileRef = 683300212F70D050000B9430 /* LNTAG215.strings */; };
-		6833FFDA2F70B965000B9430 /* LExtensions_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6833FFC32F70B88F000B9430 /* LExtensions_macOS.swift */; };
-		6833FFDB2F70B965000B9430 /* LExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6833FFC22F70B88F000B9430 /* LExtensions.swift */; };
-		6833FFFE2F70CFC8000B9430 /* LLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6833FFFD2F70CFC8000B9430 /* LLocalizer.swift */; };
-		68DD2BA12F7380050032A306 /* LNTAG215.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DD2BA02F7380050032A306 /* LNTAG215.swift */; };
+		68394D602F74B99D00B398EA /* LNTAG215.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68394D5F2F74B99D00B398EA /* LNTAG215.swift */; };
+		68394D612F74B99D00B398EA /* LLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68394D5E2F74B99D00B398EA /* LLocalizer.swift */; };
+		68394D642F74B9B000B398EA /* LNTAG215.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68394D622F74B9B000B398EA /* LNTAG215.strings */; };
+		68394D662F74B9F200B398EA /* extensions for NFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68394D652F74B9F200B398EA /* extensions for NFC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		680D01002F72D73900E7548C /* LUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LUpdate.swift; path = ../XPP/LUpdate.swift; sourceTree = SOURCE_ROOT; };
-		680D01032F72D74D00E7548C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ../../XPP/ja.lproj/LUpdate.strings; sourceTree = "<group>"; };
 		680DE5AC2F721A2900E7548C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		683300222F70D050000B9430 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ../../XPP/ja.lproj/LNTAG215.strings; sourceTree = "<group>"; };
 		6833FFB02F70B877000B9430 /* NFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6833FFC22F70B88F000B9430 /* LExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LExtensions.swift; path = "/Users/hiroshi/Developer/Xcode Projects/XPP/LExtensions.swift"; sourceTree = "<absolute>"; };
 		6833FFC32F70B88F000B9430 /* LExtensions_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LExtensions_macOS.swift; path = "/Users/hiroshi/Developer/Xcode Projects/XPP/LExtensions_macOS.swift"; sourceTree = "<absolute>"; };
-		6833FFD02F70B8FD000B9430 /* LNTAG215_py.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LNTAG215_py.swift; path = ../XPP/LNTAG215_py.swift; sourceTree = SOURCE_ROOT; };
-		6833FFFD2F70CFC8000B9430 /* LLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LLocalizer.swift; path = ../XPP/LLocalizer.swift; sourceTree = SOURCE_ROOT; };
-		68DD2BA02F7380050032A306 /* LNTAG215.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNTAG215.swift; sourceTree = "<group>"; };
+		68394D5E2F74B99D00B398EA /* LLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLocalizer.swift; sourceTree = "<group>"; };
+		68394D5F2F74B99D00B398EA /* LNTAG215.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNTAG215.swift; sourceTree = "<group>"; };
+		68394D632F74B9B000B398EA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LNTAG215.strings; sourceTree = "<group>"; };
+		68394D652F74B9F200B398EA /* extensions for NFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extensions for NFC.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -85,12 +80,10 @@
 				680DE5AC2F721A2900E7548C /* README.md */,
 				6833FFC22F70B88F000B9430 /* LExtensions.swift */,
 				6833FFC32F70B88F000B9430 /* LExtensions_macOS.swift */,
-				6833FFFD2F70CFC8000B9430 /* LLocalizer.swift */,
-				6833FFD02F70B8FD000B9430 /* LNTAG215_py.swift */,
-				683300212F70D050000B9430 /* LNTAG215.strings */,
-				680D01002F72D73900E7548C /* LUpdate.swift */,
-				680D01022F72D74D00E7548C /* LUpdate.strings */,
-				68DD2BA02F7380050032A306 /* LNTAG215.swift */,
+				68394D5E2F74B99D00B398EA /* LLocalizer.swift */,
+				68394D5F2F74B99D00B398EA /* LNTAG215.swift */,
+				68394D622F74B9B000B398EA /* LNTAG215.strings */,
+				68394D652F74B9F200B398EA /* extensions for NFC.swift */,
 			);
 			path = XPP;
 			sourceTree = "<group>";
@@ -161,9 +154,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68394D642F74B9B000B398EA /* LNTAG215.strings in Resources */,
 				680DE5AD2F721A2900E7548C /* README.md in Resources */,
-				680D01042F72D74D00E7548C /* LUpdate.strings in Resources */,
-				683300232F70D050000B9430 /* LNTAG215.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +178,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ \"${CONFIGURATION}\" == \"Release\" ]; then\n    /bin/bash \"/Users/hiroshi/Developer/distribute-on-GitHub/update_build_number.sh\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ \"${CONFIGURATION}\" == \"Release\" ]; then\n    /bin/bash \"/Users/hiroshi/Developer/distribute-on-GitHub/update_build_number_and_json.sh\" \"/Users/hiroshi/Developer/distribute-on-GitHub/NFC-Distribute/latest.json\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -195,29 +187,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6833FFDA2F70B965000B9430 /* LExtensions_macOS.swift in Sources */,
-				680D01012F72D73900E7548C /* LUpdate.swift in Sources */,
-				68DD2BA12F7380050032A306 /* LNTAG215.swift in Sources */,
-				6833FFDB2F70B965000B9430 /* LExtensions.swift in Sources */,
-				6833FFFE2F70CFC8000B9430 /* LLocalizer.swift in Sources */,
+				68394D662F74B9F200B398EA /* extensions for NFC.swift in Sources */,
+				68394D602F74B99D00B398EA /* LNTAG215.swift in Sources */,
+				68394D612F74B99D00B398EA /* LLocalizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		680D01022F72D74D00E7548C /* LUpdate.strings */ = {
+		68394D622F74B9B000B398EA /* LNTAG215.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				680D01032F72D74D00E7548C /* ja */,
-			);
-			name = LUpdate.strings;
-			sourceTree = "<group>";
-		};
-		683300212F70D050000B9430 /* LNTAG215.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				683300222F70D050000B9430 /* ja */,
+				68394D632F74B9B000B398EA /* ja */,
 			);
 			name = LNTAG215.strings;
 			sourceTree = "<group>";
@@ -355,12 +337,12 @@
 				CODE_SIGN_ENTITLEMENTS = NFC/entitlements.plist;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = H4TZ84J9G7;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
-				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
 				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
 				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
@@ -379,7 +361,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = hiroshi.okawa.NFC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -400,12 +382,12 @@
 				CODE_SIGN_ENTITLEMENTS = NFC/entitlements.plist;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = H4TZ84J9G7;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
-				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
 				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
 				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
@@ -424,7 +406,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = hiroshi.okawa.NFC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;

@@ -162,7 +162,11 @@ class LNTAG215: NSObject {
     
     private var readers = [SmartCardReaderInfo]()
     public var cardReaderStatus: SmartCardReaderStatus {
-        return readers.first!.status
+        if let reader = readers.first {
+            return reader.status
+        } else {
+            return .missing
+        }
     }
     public var delegate: Any?
 
@@ -200,9 +204,7 @@ class LNTAG215: NSObject {
     ///インスタンス生成時にUIDと書き込まれているデータを取得します
     override init() {
         super.init()
-        searchReaders()
-        NotificationCenter.default.addObserver(forName: LNTAG215.didFinishSearchingCardReadersNotification, object: self, queue: nil) { Notification in
-        }
+//        searchReaders()
     }
 }
 

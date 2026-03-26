@@ -177,7 +177,7 @@ extension ViewController: NSTextFieldDelegate {
     }
     @IBAction func readButton(_ sender: Any) {
 //        displayedNTAG.readDataAsync()
-        displayedNTAG.readUIDAsync()
+        displayedNTAG.readUIDAsync()    //UID受信デリゲートでカードデータリードをする
     }
     @IBAction func writeButton(_ sender: Any) {
         let prefix = LNTAG215.prefix(of: writeDataField.stringValue)
@@ -252,11 +252,9 @@ extension ViewController: LNTAG215Delegate {
         }
 
     }
-    
     func didFinishReadingUID(UID: String?) {
         displayedNTAG.readDataAsync()
     }
-    
     func didFinishReadingCardData(cardData: NTAGCardData?) {
         if isVerifyState {
             playSound()
@@ -287,7 +285,6 @@ extension ViewController: LNTAG215Delegate {
             }
         }
     }
-    
     func didFinishWritingCardData(success: Bool) {
         if !success {
             let alert = NSAlert.criticalAlert(okTitle: "OK", cancelTitle: nil, message: "Write Fail !".localized)
@@ -302,7 +299,6 @@ extension ViewController: LNTAG215Delegate {
             displayedNTAG.readDataAsync()
         }
     }
-    
     func writeResultWork() {
         let readPayload = displayedNTAG.cardData!.payloadString
         
@@ -329,5 +325,4 @@ extension ViewController: LNTAG215Delegate {
             }
         }
     }
-    
 }
