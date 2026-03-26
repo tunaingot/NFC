@@ -10,7 +10,7 @@ macOS 13以降はSONYの [ドライバ](https://www.sony.co.jp/Products/felica/c
 ## 必要な作業
 SONYのRC-S300は、macOS上では「スマートカードリーダー」と認識されています。
 <p align="center">
-<img width="600" src="images/100.png" />
+<img width="500" src="images/100.png" />
 </p>
 
 
@@ -46,3 +46,47 @@ XcodeのBuild Settingにentitlements.plistを指定します。
 
 の機能も利用しています。  
 必要に応じて、これらのファイルもXcodeに取り込むか、LNTAG215.swiftの中に追記してください。
+### インスタンスの生成
+init()メソッドが用意されています。
+```:swift
+var card = LNTAG215()
+```
+### デリゲートの設定
+データはデリゲートメソッドによって渡されます。  
+例えば、Xcodeプロジェクトを作成したときに作られるViewControllerに**LNTAG215Delegate**を適用してください。
+```:swift
+extension ViewController: LNTAG215Delegate {
+
+}
+```
+このデリゲートを適用すると、下記のメソッドを追加するよう、Xcodeが通知しますので、そのまま作成してください。
+```:swift
+func didFinishSearchingCardReaders(info: [SmartCardReaderInfo])
+func didFinishReadingUID(UID: String?)
+func didFinishReadingCardData(cardData: NTAGCardData?)
+func didFinishWritingCardData(success: Bool)
+```
+それぞれの処理が終わったとき、上記メソッドが呼ばれます。
+### カードリーダー状態を取得
+```:swift
+public func searchReaders() 
+```
+カードリーダーを探します。  
+結果は下記デリゲートメソッドで取得できます。
+```:swift
+func didFinishSearchingCardReaders(info: [SmartCardReaderInfo])
+```
+カードリーダーが複数接続されている場合を考慮し、infoは配列にしてあります。  
+構造体SmartCardReaderInfoはカードリーダーの情報が入っています。  
+読み出して適宜処理をしてください。
+
+
+### UIDのリード
+```:swift
+public func readUIDAsync()
+```
+リードを開始します。  
+リード結果は下記デリゲートメソッドで取得できます。
+```:swift
+func didFinishReadingUID(UID: String?)
+```
