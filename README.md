@@ -10,7 +10,7 @@ macOS 13以降はSONYの [ドライバ](https://www.sony.co.jp/Products/felica/c
 ## ビルドしたアプリケーションの解説
 
 <p align="center">
-<img width="400" src="/Users/hiroshi/Developer/Xcode Projects/NFC/images/10.png" />
+<img width="400" src="images/10.png" />
 </p>
 
 シンプルに
