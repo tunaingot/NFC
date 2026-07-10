@@ -10,10 +10,8 @@ import Cocoa
 
 public func dprint(
     _ items: Any...,
-    file: String = #fileID,
-    function: String = #function,
-    line: Int = #line
 ) {
+    Swift.print(items)
 }
 
 extension String {

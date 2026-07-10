@@ -704,8 +704,8 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="NFC" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="676" height="372"/>
+                    <view key="view" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="676" height="364"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box title="Read" translatesAutoresizingMaskIntoConstraints="NO" id="J8h-Ni-Fz8">
@@ -743,7 +743,7 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gnp-P3-FfM">
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gnp-P3-FfM">
                                             <rect key="frame" x="219" y="84" width="81" height="24"/>
                                             <buttonCell key="cell" type="push" title="Read UID" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cYF-kB-K7q">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1034,6 +1034,16 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bIh-my-8p0">
+                                <rect key="frame" x="576" y="16" width="80" height="24"/>
+                                <buttonCell key="cell" type="push" title="Debug" bezelStyle="rounded" image="ant.fill" catalog="system" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dFi-Rc-YUB">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="debugButton:" target="XfG-lQ-9wD" id="ATW-Wg-zww"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="GYV-41-y2q" firstAttribute="leading" secondItem="hlb-xF-4JG" secondAttribute="leading" id="14k-uA-ph1"/>
@@ -1044,6 +1054,7 @@
                             <constraint firstItem="GYV-41-y2q" firstAttribute="trailing" secondItem="hlb-xF-4JG" secondAttribute="trailing" id="9Hj-Ik-Qwl"/>
                             <constraint firstItem="PKI-jX-tqO" firstAttribute="leading" secondItem="aDn-Yd-a4w" secondAttribute="trailing" constant="8" id="Bmq-YV-FJ7"/>
                             <constraint firstItem="3Fx-Hd-Ic3" firstAttribute="leading" secondItem="scV-Bc-hhw" secondAttribute="leading" id="DLG-1d-65t"/>
+                            <constraint firstItem="bIh-my-8p0" firstAttribute="bottom" secondItem="PKI-jX-tqO" secondAttribute="bottom" id="JAt-V6-bPC"/>
                             <constraint firstItem="QrT-jN-Boo" firstAttribute="leading" secondItem="wOw-pn-va8" secondAttribute="leading" id="Mhx-fW-nMu"/>
                             <constraint firstItem="YFL-xZ-2vd" firstAttribute="trailing" secondItem="PiF-nc-TPk" secondAttribute="trailing" id="NW2-5M-lrv"/>
                             <constraint firstItem="wPE-Ky-M4Q" firstAttribute="leading" secondItem="U7M-0M-zuh" secondAttribute="leading" id="PuI-eF-a4f"/>
@@ -1062,11 +1073,13 @@
                             <constraint firstItem="Gxz-cK-7j2" firstAttribute="trailing" secondItem="vTf-jZ-xji" secondAttribute="trailing" id="wTE-2o-rL6"/>
                             <constraint firstItem="zUl-Ue-csK" firstAttribute="leading" secondItem="J8h-Ni-Fz8" secondAttribute="leading" id="xca-bc-YbS"/>
                             <constraint firstItem="J8h-Ni-Fz8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="xhp-L7-E1m"/>
+                            <constraint firstItem="bIh-my-8p0" firstAttribute="trailing" secondItem="zUl-Ue-csK" secondAttribute="trailing" id="yZQ-1S-VpQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="autoOpenURLCheck" destination="jJN-z1-hdb" id="9CK-3q-RZe"/>
                         <outlet property="autoReadingCheck" destination="0Qj-r7-bIh" id="gdU-Jk-ZDT"/>
+                        <outlet property="debugButton" destination="bIh-my-8p0" id="7SA-x7-xRZ"/>
                         <outlet property="likelyCardLabel" destination="4St-8Y-otF" id="Tdb-rT-7nk"/>
                         <outlet property="openURLButton" destination="scV-Bc-hhw" id="i5p-pY-BEH"/>
                         <outlet property="readButton" destination="Gxz-cK-7j2" id="pkQ-dD-Yvs"/>
@@ -1092,6 +1105,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ant.fill" catalog="system" width="14" height="18"/>
         <image name="arrow.trianglehead.2.clockwise.rotate.90" catalog="system" width="16" height="15"/>
         <image name="gear" catalog="system" width="17" height="16"/>
         <image name="globe" catalog="system" width="15" height="15"/>

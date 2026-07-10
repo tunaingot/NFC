@@ -11,7 +11,7 @@
 		68394D602F74B99D00B398EA /* LNTAG215.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68394D5F2F74B99D00B398EA /* LNTAG215.swift */; };
 		68394D612F74B99D00B398EA /* LLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68394D5E2F74B99D00B398EA /* LLocalizer.swift */; };
 		68394D642F74B9B000B398EA /* LNTAG215.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68394D622F74B9B000B398EA /* LNTAG215.strings */; };
-		68394D992F74CD7900B398EA /* extensions for NFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68394D652F74B9F200B398EA /* extensions for NFC.swift */; };
+		684E910B3001A6830083D139 /* extensions for NFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68394D652F74B9F200B398EA /* extensions for NFC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -187,8 +187,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68394D992F74CD7900B398EA /* extensions for NFC.swift in Sources */,
 				68394D602F74B99D00B398EA /* LNTAG215.swift in Sources */,
+				684E910B3001A6830083D139 /* extensions for NFC.swift in Sources */,
 				68394D612F74B99D00B398EA /* LLocalizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

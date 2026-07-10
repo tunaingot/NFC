@@ -8,8 +8,21 @@
 import Foundation
 import CryptoTokenKit
 
+public enum NFCCardType {
+    case NTAG
+    case FeliCa
+    
+    var name: String {
+        switch self {
+            case .NTAG: return "NTAG"
+            case .FeliCa: return "FeliCa"
+        }
+    }
+}
+
 protocol LNTAG215Delegate {
     func didFinishSearchingCardReaders(info: [SmartCardReaderInfo])
+    func didFinishCheckCardType(cardType: NFCCardType?)
     func didFinishReadingUID(UID: String?)
     func didFinishReadingCardData(cardData: NTAGCardData?)
     func didFinishWritingCardData(success: Bool)
@@ -172,7 +185,7 @@ class LNTAG215: NSObject {
 
     private(set) var cardData: NTAGCardData?
     private(set) var UID = ""
-
+    private(set) var cardType = NFCCardType.NTAG
     public var prefix: String {
         guard cardData != nil else { return "" }
         
@@ -220,7 +233,21 @@ extension LNTAG215 {
                 print("Name: \(info.name), Status: \(info.status.rawValue), ATR: \(info.atr), CanWrite: \(info.canWrite)")
             }
             NotificationCenter.default.post(name: didFinishSearchingCardReadersNotification, object: self)
-            (delegate as? LNTAG215Delegate)?.didFinishSearchingCardReaders(info: readers)
+            DispatchQueue.main.async { [self] in
+                (delegate as? LNTAG215Delegate)?.didFinishSearchingCardReaders(info: readers)
+            }
+        }
+    }
+    public func checkCardType() {
+        checkCardType { [self] ct in
+            let result = ct
+            
+            if result != nil {
+                cardType = result!
+            }
+            DispatchQueue.main.async { [self] in
+                (delegate as? LNTAG215Delegate)?.didFinishCheckCardType(cardType: result)
+            }
         }
     }
     public func readUIDAsync() {
@@ -230,7 +257,9 @@ extension LNTAG215 {
             if result != nil {
                 UID = result!
             }
-            (delegate as? LNTAG215Delegate)?.didFinishReadingUID(UID: result)
+            DispatchQueue.main.async { [self] in
+                (delegate as? LNTAG215Delegate)?.didFinishReadingUID(UID: result)
+            }
         }
     }
     public func readDataAsync() {
@@ -238,7 +267,9 @@ extension LNTAG215 {
 //            dprint(String(data))
             cardData = NTAGCardData(readData: data)
 //            dprint(cardData?.payloadString)
-            (delegate as? LNTAG215Delegate)?.didFinishReadingCardData(cardData: cardData)
+            DispatchQueue.main.async { [self] in
+                (delegate as? LNTAG215Delegate)?.didFinishReadingCardData(cardData: cardData)
+            }
         }
     }
     public func writeDataAsync(prefix: Int, payload: Data) {
@@ -247,6 +278,7 @@ extension LNTAG215 {
             (delegate as? LNTAG215Delegate)?.didFinishWritingCardData(success: success)
         }
     }
+    
     /// 接続されているリーダー情報を取得する非同期メソッド
     /// - Parameter completion: 結果の配列を返すクロージャー
     /*==========================================================================
@@ -302,6 +334,29 @@ extension LNTAG215 {
         
         group.notify(queue: .main) {
             completion(results)
+        }
+    }
+    private func checkCardType(completion: @escaping (NFCCardType?) -> Void) {
+        guard let manager = TKSmartCardSlotManager.default else {
+            completion(nil)
+            return
+        }
+        
+        guard let slotName = manager.slotNames.first else {
+            completion(nil)
+            return
+        }
+        
+        manager.getSlot(withName: slotName) { slot in
+            if let atrBytes = slot?.atr?.bytes {
+                if atrBytes[12] == 0x11 {
+                    completion(.FeliCa)
+                } else {
+                    completion(.NTAG)
+                }
+            } else {
+                completion(nil)
+            }
         }
     }
     private func readUID(completion: @escaping (String?) -> Void) {

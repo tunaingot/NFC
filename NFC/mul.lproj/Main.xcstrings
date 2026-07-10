@@ -637,6 +637,18 @@
         }
       }
     },
+    "dFi-Rc-YUB.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Debug\"; ObjectID = \"dFi-Rc-YUB\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Debug"
+          }
+        }
+      }
+    },
     "dMs-cI-mzQ.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"File\"; ObjectID = \"dMs-cI-mzQ\";",
       "extractionState" : "extracted_with_value",
