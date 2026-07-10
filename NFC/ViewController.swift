@@ -110,6 +110,11 @@ extension ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         readUIDButton.isHidden = true
+#if DEBUG
+        debugButton.isHidden = false
+#else
+        debugButton.isHidden = true
+#endif
         
         displayedNTAG.delegate = self
         
@@ -282,6 +287,8 @@ extension ViewController: LNTAG215Delegate {
                 readURLPrefixField.stringValue = ""
                 readPrefixField.stringValue = ""
                 readDataField.stringValue = ""
+                likelyCardLabel.stringValue = String(format: LIKELY_CARD_FORMAT, NFCCardType.FeliCa.name)
+                readBytesLabel.stringValue = String(format: WRITE_BYTES_FORMAT, 0)
                 playSound()
             }
         }
